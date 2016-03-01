@@ -8,5 +8,5 @@ setup(name='postopy',
       author='Rahman Mousavian',
       author_email='Mousavian.Rahman@gmail.com',
       license='MIT',
-      packages=('postopy'),
+      packages=['postopy'],
       zip_safe=False)
