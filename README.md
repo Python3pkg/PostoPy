@@ -3,11 +3,18 @@ _**PostoExpress** is an on demand dispatch platform aiming to provide convenienc
 # PostoPy
 Posto Express Python API Wrapper 
 
+
+### Installation
+`python setup.py install`
+
 ### Usage
 
 [Authentication](https://postoapi.com/api/#api_authentication):
 
-`client = PostoExpress(app_id=APP_ID, token=APP_TOKEN)`
+```
+from postopy import PostoExpress
+client = PostoExpress(app_id=APP_ID, token=APP_TOKEN)
+```
 
 [Zone Calculator](https://postoapi.com/api/#api_zon_calculator):
 
