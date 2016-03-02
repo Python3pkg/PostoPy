@@ -17,7 +17,7 @@ class PostoExpress:
 
         if response[0]['status'] is False:
             raise PostoError(response[0]['message'])
-        return response
+        return response[0]
 
     def estimateByPostcode(self, pickup, delivery):
         response = self.client.post('calculator/postcode', pickup=pickup, delivery=delivery)
@@ -25,7 +25,7 @@ class PostoExpress:
 
         if response[0]['status'] is False:
             raise PostoError(response[0]['message'])
-        return response
+        return response[0]
 
     def estimateByAddress(self, pickup, delivery):
         response = self.client.post('calculator/address', pickup=pickup, delivery=delivery)
@@ -33,7 +33,7 @@ class PostoExpress:
 
         if response[0]['status'] is False:
             raise PostoError(response[0]['message'])
-        return response
+        return response[0]
 
     def track(self, jobid):
         response = self.client.post('tracker', jobid=jobid)
